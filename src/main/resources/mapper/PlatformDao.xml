@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.dao.PlatformDao">
+
+    <insert id="addPlatform" parameterType="com.boot.entity.Platform">
+        INSERT INTO
+            B_PLATFORM
+            (
+            <if test="iconUrl!=null">icon_url,</if>
+            platform_name,
+            create_time,
+            update_time
+            )
+        VALUES
+            (
+            <if test="iconUrl!=null">#{iconUrl},</if>
+            #{platformName},
+            #{createTime},
+            #{updateTime}
+            )
+    </insert>
+
+    <select id="queryPlatform" resultType="com.boot.entity.Platform">
+        SELECT
+            id,
+            platform_name,
+            icon_url,
+            use_count,
+            create_time,
+            update_time
+        FROM
+            B_PLATFORM
+    </select>
+
+    <select id="queryPlatformById" resultType="com.boot.entity.Platform">
+        SELECT
+            id,
+            platform_name,
+            icon_url,
+            use_count,
+            create_time,
+            update_time
+        FROM
+            B_PLATFORM
+        WHERE
+            id=#{id}
+    </select>
+
+    <select id="queryPlatformByName" parameterType="java.lang.String" resultType="com.boot.entity.Platform">
+        SELECT
+            id,
+            platform_name,
+            icon_url,
+            use_count,
+            create_time,
+            update_time
+        FROM
+            B_PLATFORM
+        WHERE
+            platform_name=#{platformName}
+    </select>
+
+    <select id="queryPlatformSoMuchUseful" resultType="com.boot.entity.Platform">
+        SELECT
+            id,
+            platform_name,
+            icon_url,
+            use_count,
+            create_time,
+            update_time
+        FROM
+            B_PLATFORM
+        ORDER BY
+            use_count DESC,
+            update_time DESC
+        LIMIT 0,20
+    </select>
+
+    <update id="autoIncrementCount" parameterType="com.boot.entity.Platform">
+        UPDATE
+            B_PLATFORM
+        SET
+            use_count = use_count + 1
+        WHERE
+            id = #{id}
+    </update>
+
+</mapper>

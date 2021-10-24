@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.dao.SystemLogDao">
+
+    <insert id="saveProfileLog" parameterType="java.util.HashMap">
+        INSERT INTO S_PRO_LOG
+        (ip, see_time)
+        values
+        (#{ip}, #{current})
+    </insert>
+</mapper>

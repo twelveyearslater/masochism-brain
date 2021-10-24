@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>使用jsencrypt执行OpenSSL的RSA加密，解密</title>
+
+    </head>
+
+    <!--引入jsencrypt.js-->
+
+<!--    <script src="https://cdn.bootcss.com/jsencrypt/3.0.0-beta.1/jsencrypt.js"></script>-->
+    <script src="../js/rsa.js"></script>
+
+    <script type="text/javascript">
+
+        //公钥
+
+        var PUBLIC_KEY = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJbM2OQdY7IRHNQ6lu3rm+4ylDK6Sey1PlGzTvtrHuUOP14yt98XTlgJr6ROMtINWTfETxJLCcHr+GhgTIrhtGkCAwEAAQ==';
+
+        //私钥
+
+        var PRIVATE_KEY = 'MIIBVQIBADANBgkqhkiG9w0BAQEFAASCAT8wggE7AgEAAkEAlszY5B1jshEc1DqW7eub7jKUMrpJ7LU+UbNO+2se5Q4/XjK33xdOWAmvpE4y0g1ZN8RPEksJwev4aGBMiuG0aQIDAQABAkEAleXwHujb5fA+wPOwfbW7XU5no/krbKFI3jun4iE8J6C1PA+NWDn5GhGESkGMwvNL7+pfetv6GLAz389hl0NAJQIhAN725opgjY1O09JXr1ZGSIO+nNVem0HvaUai+hGFqlSDAiEArSS8uv7hdaoM52E+hWIkMjyftvQBj8Y9p8MZdl43d6MCIFstPDl6ImiWw6hQkzMEqsK1QA1BEtxzuulX3EsuDelhAiEAj1JOq5eaN5UI02rqnuyrO651IrN+q22U0c6swA+jaHMCIHqy1JYuRURmCAl9SkUXG5uJnYuXIr0W7o7Q3qqVac6O';
+
+        //使用公钥加密
+
+        var encrypt = new JSEncrypt();
+
+		  //encrypt.setPrivateKey('-----BEGIN RSA PRIVATE KEY-----'+PRIVATE_KEY+'-----END RSA PRIVATE KEY-----');
+
+        encrypt.setPublicKey('-----BEGIN PUBLIC KEY-----' + PUBLIC_KEY + '-----END PUBLIC KEY-----');
+
+        var encrypted = encrypt.encrypt('ceshi01');
+
+        console.log('加密后数据:%o', encrypted);
+
+        alert(encrypted);
+
+        //使用私钥解密
+
+        var decrypt = new JSEncrypt();
+
+		//decrypt.setPublicKey('-----BEGIN PUBLIC KEY-----' + PUBLIC_KEY + '-----END PUBLIC KEY-----');
+
+        decrypt.setPrivateKey('-----BEGIN RSA PRIVATE KEY-----'+PRIVATE_KEY+'-----END RSA PRIVATE KEY-----');
+
+        var uncrypted = decrypt.decrypt(encrypted);
+
+        console.log('解密后数据:%o', uncrypted);
+
+        alert(uncrypted);
+
+    </script>
+
+ 
+
+</html>
+
+ 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.dao.AreaDao">
+    <select id="queryArea" resultType="com.boot.entity.Area">
+        SELECT area_id,area_name,
+        priority,create_time,last_edit_time
+        FROM B_AREA
+        ORDER BY priority
+        DESC
+    </select>
+
+    <select id="queryAreaById" resultType="com.boot.entity.Area">
+        SELECT area_id,area_name,
+        priority,create_time,last_edit_time
+        FROM B_AREA
+        WHERE
+        area_id=#{areaId}
+    </select>
+
+    <insert id="insertArea" useGeneratedKeys="true" keyProperty="areaId"
+            keyColumn="area_id" parameterType="com.boot.entity.Area">
+        INSERT INTO
+        B_AREA (area_name,priority,
+        create_time,last_edit_time)
+        VALUES
+        (#{areaName},#{priority},#{createTime},#{lastEditTime})
+    </insert>
+
+    <update id="updateArea" parameterType="com.boot.entity.Area">
+        UPDATE B_AREA
+        <set>
+            <if test="areaName!=null">area_name=#{areaName},</if>
+            <if test="priority!=null">priority=#{priority},</if>
+            <if test="lastEditTime!=null">last_edit_time=#{lastEditTime}</if>
+            WHERE area_id=#{areaId}
+        </set>
+    </update>
+
+    <delete id="deleteArea">
+        DELETE FROM B_AREA
+        WHERE
+        area_id=#{areaId}
+    </delete>
+
+    <select id="queryAble" parameterType="java.util.HashMap" resultType="java.util.LinkedHashMap">
+        SELECT * FROM ability LIMIT #{start},#{end}
+    </select>
+
+    <select id="getCursor" parameterType="java.util.HashMap" resultType="java.util.LinkedHashMap" resultOrdered="true" fetchSize="-2147483648" resultSetType="FORWARD_ONLY">
+        SELECT * FROM ability LIMIT #{start},#{end}
+    </select>
+
+</mapper>

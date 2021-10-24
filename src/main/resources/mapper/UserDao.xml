@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boot.dao.UserDao">
+    <select id="queryAuthPwdById" resultType="java.lang.String">
+        SELECT password
+        FROM S_USER
+        WHERE id=#{id}
+    </select>
+
+    <select id="queryAuthPwdByCode" resultType="java.lang.String">
+        SELECT password
+        FROM S_USER
+        WHERE id=#{code}
+        OR username=#{code}
+        OR email=#{code}
+    </select>
+
+    <select id="queryUserById" resultType="com.boot.entity.UserMsg">
+        SELECT id,email,phone,we_chat_id,username,
+        invalidate,error_count,nickname,encode_queue,sign_time,
+        last_login_time,last_login_ip,online_hour,status,decode_type,
+        decode_queue
+        FROM S_USER
+        where id=#{id};
+    </select>
+
+    <!-- 通过ID，用户名，绑定邮箱获取用户信息 -->
+    <select id="queryUserByCode" resultType="com.boot.entity.UserMsg">
+        SELECT id,email,phone,we_chat_id,username,birthday,
+        invalidate,error_count,nickname,encode_queue,sign_time,
+        last_login_time,last_login_ip,online_hour,status,decode_type,
+        decode_queue,id_card,gender,signature,sina,live_region,hometown
+        FROM S_USER
+        where id=#{id}
+        OR username=#{code}
+        OR email=#{code};
+    </select>
+
+    <select id="queryUserByWxId" resultType="com.boot.entity.UserMsg">
+        SELECT user_id,email,phone,we_chat_id,username,password,
+        invalidate,error_count,nickname,encode_queue,sign_time,
+        last_login_time,last_login_ip,online_hour,status
+        FROM S_USER
+        where we_chat_id=#{weChatId};
+    </select>
+
+    <insert id="insertUser" keyColumn="user_id" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.boot.entity.UserMsg">
+        INSERT INTO S_USER (
+        <if test="email!=null">email,</if>
+        <if test="phone!=null">phone,</if>
+        <if test="weChatId!=null">we_chat_id,</if>
+        <if test="salt!=null">salt,</if>
+        username,password,encode_queue,decode_queue,
+        sign_time,status,decode_type)
+        VALUES (
+        <if test="email!=null">#{email},</if>
+        <if test="phone!=null">#{phone},</if>
+        <if test="weChatId!=null">#{weChatId},</if>
+        <if test="salt!=null">#{salt},</if>
+        #{username},#{password},
+        #{encodeQueue},#{decodeQueue},
+        #{signTime},#{status},#{decodeType})
+    </insert>
+
+    <update id="updateUser" parameterType="com.boot.entity.UserMsg">
+        UPDATE S_USER
+        <set>
+            <if test="email!=null">email=#{email},</if>
+            <if test="phone!=null">phone=#{phone},</if>
+            <if test="weChatId!=null">we_chat_id=#{weChatId},</if>
+            <if test="password!=null">auth_psw=#{password},</if>
+            <if test="invalidate!=null">invalidate=#{invalidate},</if>
+            <if test="errorCount!=null">error_count=#{errorCount},</if>
+            <if test="nickname!=null">nickname=#{nickname},</if>
+            <if test="encodeQueue!=null">encode_queue=#{encodeQueue},</if>
+            <if test="lastLoginTime!=null">last_login_time=#{lastLoginTime}</if>
+            <if test="lastLoginIp!=null">last_login_ip=#{lastLoginIp}</if>
+            <if test="onlineHour!=null">online_hour=#{onlineHour}</if>
+            <if test="status!=null">status=#{status}</if>
+            <if test="idCard!=null">id_card=#{idCard}</if>
+            <if test="gender!=null">gender=#{gender}</if>
+            <if test="signature!=null">signature=#{signature}</if>
+            <if test="sina!=null">sina=#{sina}</if>
+            <if test="liveRegion!=null">live_region=#{liveRegion}</if>
+            <if test="hometown!=null">hometown=#{hometown}</if>
+            <if test="realName!=null">real_name=#{realName}</if>
+            <if test="birthday!=null">birthday=#{birthday}</if>
+            WHERE id=#{id}
+        </set>
+        WHERE id=#{id}
+    </update>
+
+    <update id="saveUserPublicKey" parameterType="java.util.Map">
+        UPDATE S_USER
+        SET encode_queue = #{key}
+        WHERE id = #{id}
+    </update>
+
+    <select id="getCountByUsernameOrEmail" parameterType="com.boot.entity.UserMsg" resultType="int">
+        SELECT count(1)
+        FROM S_USER
+        WHERE email = #{email} OR username = #{username}
+    </select>
+
+    <update id="activeByCode" parameterType="java.lang.String">
+        UPDATE S_USER
+        SET status = 1
+        WHERE encode_queue = #{code}
+    </update>
+</mapper>

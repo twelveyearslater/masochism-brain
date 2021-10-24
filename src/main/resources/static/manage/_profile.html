@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>卜M - 开发者简介</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/M3.ico">
+
+    <!-- App css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        #com-a {
+            font-weight: 400;
+            color: rgba(255,255,255,0.5);
+        }
+        #com-a:hover {
+            font-weight: 700;
+            color: rgba(255,255,255,0.5);
+        }
+        .btn-tech {
+            line-height: 0.6;
+            border-radius: 1.15rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- Topbar Start -->
+<div class="navbar-custom topnav-navbar">
+    <div class="container-fluid">
+
+        <!-- LOGO -->
+        <a href="#" class="topnav-logo">
+                    <span class="topnav-logo-lg">
+                        <img src="assets/images/logo-light.png" alt="" height="16">
+                    </span>
+            <span class="topnav-logo-sm">
+                        <img src="assets/images/logo_sm.png" alt="" height="16">
+                    </span>
+        </a>
+
+        <ul class="list-unstyled topbar-right-menu float-right mb-0">
+
+            <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" id="topbar-languagedrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="assets/images/flags/us.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">English</span> <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu" aria-labelledby="topbar-languagedrop">
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="assets/images/flags/germany.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">German</span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="assets/images/flags/italy.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Italian</span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="assets/images/flags/spain.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Spanish</span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="assets/images/flags/russia.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Russian</span>
+                    </a>
+
+                </div>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" id="topbar-notifydrop" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="dripicons-bell noti-icon"></i>
+                    <span class="noti-icon-badge"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg" aria-labelledby="topbar-notifydrop">
+
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                        <h5 class="m-0">
+                                    <span class="float-right">
+                                        <a href="javascript: void(0);" class="text-dark">
+                                            <small>Clear All</small>
+                                        </a>
+                                    </span>Notification
+                        </h5>
+                    </div>
+
+                    <div class="slimscroll" style="max-height: 230px;">
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-primary">
+                                <i class="mdi mdi-comment-account-outline"></i>
+                            </div>
+                            <p class="notify-details">Caleb Flakelar commented on Admin
+                                <small class="text-muted">1 min ago</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-info">
+                                <i class="mdi mdi-account-plus"></i>
+                            </div>
+                            <p class="notify-details">New user registered.
+                                <small class="text-muted">5 hours ago</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon">
+                                <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                            <p class="notify-details">Cristina Pride</p>
+                            <p class="text-muted mb-0 user-msg">
+                                <small>Hi, How are you? What about our next meeting</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-primary">
+                                <i class="mdi mdi-comment-account-outline"></i>
+                            </div>
+                            <p class="notify-details">Caleb Flakelar commented on Admin
+                                <small class="text-muted">4 days ago</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon">
+                                <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                            <p class="notify-details">Karen Robinson</p>
+                            <p class="text-muted mb-0 user-msg">
+                                <small>Wow ! this admin looks good and awesome design</small>
+                            </p>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-info">
+                                <i class="mdi mdi-heart"></i>
+                            </div>
+                            <p class="notify-details">Carlos Crouch liked
+                                <b>Admin</b>
+                                <small class="text-muted">13 days ago</small>
+                            </p>
+                        </a>
+                    </div>
+
+                    <!-- All-->
+                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                        View All
+                    </a>
+
+                </div>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link right-bar-toggle" href="javascript: void(0);">
+                    <i class="dripicons-gear noti-icon"></i>
+                </a>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown" id="topbar-userdrop" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false">
+                            <span class="account-user-avatar">
+                                <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                            </span>
+                    <span>
+                                <span class="account-user-name">游客</span>
+                                <span class="account-position">游客身份</span>
+                            </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown" aria-labelledby="topbar-userdrop">
+                    <!-- item-->
+                    <div class=" dropdown-header noti-title">
+                        <h6 class="text-overflow m-0">欢迎您！</h6>
+                    </div>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="mdi mdi-account-circle mr-1"></i>
+                        <span>My Account</span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="mdi mdi-account-edit mr-1"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="mdi mdi-lifebuoy mr-1"></i>
+                        <span>Support</span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="mdi mdi-lock-outline mr-1"></i>
+                        <span>Lock Screen</span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="mdi mdi-logout mr-1"></i>
+                        <span>Logout</span>
+                    </a>
+
+                </div>
+            </li>
+
+        </ul>
+        <a class="button-menu-mobile disable-btn">
+            <div class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
+        <div class="app-search">
+            <form>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="mdi mdi-magnify"></span>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end Topbar -->
+
+
+<div class="container-fluid">
+
+    <!-- Begin page -->
+    <div class="wrapper">
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <!-- Start Content-->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+            <div class="leftbar-user">
+                <a href="#">
+                    <img src="assets/images/users/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
+                    <div class="leftbar-user-name" >游客身份</div>
+                </a>
+            </div>
+
+            <!--- Sidemenu -->
+            <ul class="metismenu side-nav">
+
+                <li class="side-nav-title side-nav-item">『 功能菜单 』</li>
+
+                <li class="side-nav-item">
+                    <a href="javascript: void(0);" class="side-nav-link">
+                        <i class="dripicons-meter"></i>
+                        <span class="badge badge-success float-right">3</span>
+                        <span> 常用工具 </span>
+                    </a>
+                    <ul class="side-nav-second-level" aria-expanded="false">
+                        <li>
+                            <a href="_passwords.html">蜜罐工具</a>
+                        </li>
+                        <li>
+                            <a href="javascript:alert('暂未开放')">ToDoList</a>
+                        </li>
+                        <li>
+                            <a href="javascript:alert('暂未开放')">个人简介</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="javascript: void(0);" class="side-nav-link">
+                        <i class="dripicons-view-apps"></i>
+                        <span> 关于我们 </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="side-nav-second-level" aria-expanded="false">
+                        <li>
+                            <a href="_profile.html">网站开发者简介</a>
+                        </li>
+                        <!--<li class="side-nav-item">
+                            <a href="javascript: void(0);" aria-expanded="false">Projects
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-third-level" aria-expanded="false">
+                                <li>
+                                    <a href="apps-projects-list.html">List</a>
+                                </li>
+                                <li>
+                                    <a href="apps-projects-details.html">Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="apps-tasks.html">Tasks</a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" aria-expanded="false">eCommerce
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-third-level" aria-expanded="false">
+                                <li>
+                                    <a href="apps-ecommerce-products.html">Products</a>
+                                </li>
+                                <li>
+                                    <a href="apps-ecommerce-products-details.html">Products Details</a>
+                                </li>
+                                <li>
+                                    <a href="apps-ecommerce-orders.html">Orders</a>
+                                </li>
+                                <li>
+                                    <a href="apps-ecommerce-orders-details.html">Order Details</a>
+                                </li>
+                                <li>
+                                    <a href="apps-ecommerce-customers.html">Customers</a>
+                                </li>
+                                <li>
+                                    <a href="apps-ecommerce-shopping-cart.html">Shopping Cart</a>
+                                </li>
+                                <li>
+                                    <a href="apps-ecommerce-checkout.html">Checkout</a>
+                                </li>
+                                <li>
+                                    <a href="apps-ecommerce-sellers.html">Sellers</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </li>
+
+                <!--<li class="side-nav-item">
+                    <a href="javascript: void(0);" class="side-nav-link">
+                        <i class="dripicons-copy"></i>
+                        <span> Pages </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="side-nav-second-level" aria-expanded="false">
+                        <li>
+                            <a href="pages-starter.html">Starter Page</a>
+                        </li>
+                        <li>
+                            <a href="pages-profile.html">Profile</a>
+                        </li>
+                        <li>
+                            <a href="pages-invoice.html">Invoice</a>
+                        </li>
+                        <li>
+                            <a href="pages-faq.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="pages-pricing.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="pages-maintenance.html">Maintenance</a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" aria-expanded="false">Authentication
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-third-level" aria-expanded="false">
+                                <li>
+                                    <a href="pages-login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="pages-login-2.html">Login 2</a>
+                                </li>
+                                <li>
+                                    <a href="pages-register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="pages-register-2.html">Register 2</a>
+                                </li>
+                                <li>
+                                    <a href="pages-logout.html">Logout</a>
+                                </li>
+                                <li>
+                                    <a href="pages-logout-2.html">Logout 2</a>
+                                </li>
+                                <li>
+                                    <a href="pages-recoverpw.html">Recover Password</a>
+                                </li>
+                                <li>
+                                    <a href="pages-recoverpw-2.html">Recover Password 2</a>
+                                </li>
+                                <li>
+                                    <a href="pages-lock-screen.html">Lock Screen</a>
+                                </li>
+                                <li>
+                                    <a href="pages-lock-screen-2.html">Lock Screen 2</a>
+                                </li>
+                                <li>
+                                    <a href="pages-confirm-mail.html">Confirm Mail</a>
+                                </li>
+                                <li>
+                                    <a href="pages-confirm-mail-2.html">Confirm Mail 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" aria-expanded="false">Error
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-third-level" aria-expanded="false">
+                                <li>
+                                    <a href="pages-404.html">Error 404</a>
+                                </li>
+                                <li>
+                                    <a href="pages-404-alt.html">Error 404-alt</a>
+                                </li>
+                                <li>
+                                    <a href="pages-500.html">Error 500</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="side-nav-title side-nav-item mt-1">Components</li>
+
+                <li class="side-nav-item">
+                    <a href="javascript: void(0);" class="side-nav-link">
+                        <i class="dripicons-briefcase"></i>
+                        <span> UI Kit </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="side-nav-second-level" aria-expanded="false">
+                        <li>
+                            <a href="ui-cards.html">Cards</a>
+                        </li>
+                        <li>
+                            <a href="ui-buttons.html">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="ui-modals.html">Modals</a>
+                        </li>
+                        <li>
+                            <a href="ui-tabs.html">Tabs</a>
+                        </li>
+                        <li>
+                            <a href="ui-notifications.html">Notifications</a>
+                        </li>
+                        <li>
+                            <a href="ui-grid.html">Grid</a>
+                        </li>
+                        <li>
+                            <a href="ui-general.html">General</a>
+                        </li>
+                        <li>
+                            <a href="ui-typography.html">Typography</a>
+                        </li>
+                        <li>
+                            <a href="ui-icons.html">Icons</a>
+                        </li>
+                        <li>
+                            <a href="ui-spinners.html">Spinners</a>
+                        </li>
+                        <li>
+                            <a href="ui-dragula.html">Dragula</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="widgets.html" class="side-nav-link">
+                        <i class="dripicons-heart"></i>
+                        <span class="badge badge-light float-right">New</span>
+                        <span> Widgets </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="javascript: void(0);" class="side-nav-link">
+                        <i class="dripicons-document"></i>
+                        <span> Forms </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="side-nav-second-level" aria-expanded="false">
+                        <li>
+                            <a href="form-elements.html">Basic Elements</a>
+                        </li>
+                        <li>
+                            <a href="form-advanced.html">Form Advanced</a>
+                        </li>
+                        <li>
+                            <a href="form-validation.html">Validation</a>
+                        </li>
+                        <li>
+                            <a href="form-wizard.html">Wizard</a>
+                        </li>
+                        <li>
+                            <a href="form-fileuploads.html">File Uploads</a>
+                        </li>
+                        <li>
+                            <a href="form-editors.html">Editors</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="javascript: void(0);" class="side-nav-link">
+                        <i class="dripicons-graph-pie"></i>
+                        <span> Charts </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="side-nav-second-level" aria-expanded="false">
+                        <li>
+                            <a href="charts-chartjs.html">Chartjs</a>
+                        </li>
+                        <li>
+                            <a href="charts-brite.html">Britecharts</a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" aria-expanded="false">Apex Charts
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-third-level" aria-expanded="false">
+                                <li>
+                                    <a href="charts-apex-line.html">Line</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-area.html">Area</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-column.html">Column</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-bar.html">Bar</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-mixed.html">Mixed</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-bubble.html">Bubble</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-scatter.html">Scatter</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-pie.html">Pie</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-radialbar.html">RadialBar</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-heatmap.html">Heatmap</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-sparklines.html">Sparklines</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-candlestick.html">Candlestick</a>
+                                </li>
+                                <li>
+                                    <a href="charts-apex-radar.html">Radar</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="charts-sparkline.html">Sparklines</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="javascript: void(0);" class="side-nav-link">
+                        <i class="dripicons-list"></i>
+                        <span> Tables </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="side-nav-second-level" aria-expanded="false">
+                        <li>
+                            <a href="tables-basic.html">Basic Tables</a>
+                        </li>
+                        <li>
+                            <a href="tables-datatable.html">Data Tables</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="javascript: void(0);" class="side-nav-link">
+                        <i class="dripicons-location"></i>
+                        <span> Maps </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="side-nav-second-level" aria-expanded="false">
+                        <li>
+                            <a href="maps-google.html">Google Maps</a>
+                        </li>
+                        <li>
+                            <a href="maps-vector.html">Vector Maps</a>
+
+                        </li>
+                    </ul>
+                </li>
+
+            </ul> -->
+
+            <!-- Help Box -->
+            <div class="help-box text-center">
+                <a href="javascript: void(0);" class="float-right close-btn text-body">
+                    <i class="mdi mdi-close"></i>
+                </a>
+                <img src="assets/images/help-icon.svg" height="90" alt="Helper Icon Image" />
+                <h5 class="mt-3">Unlimited Access</h5>
+                <p class="mb-3">Upgrade to plan to get access to unlimited reports</p>
+                <a href="javascript: void(0);" class="btn btn-outline-primary btn-sm">Upgrade</a>
+            </div>
+            <!-- end Help Box -->
+            <!-- End Sidebar -->
+
+            <div class="clearfix"></div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">主页</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">关于我们</a></li>
+                                    <li class="breadcrumb-item active">网站开发者简介</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">网站开发者简介</h4>
+                        </div> <!-- end page-title-box -->
+                    </div> <!-- end col-->
+                </div>
+                <!-- end page title -->
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Profile -->
+                        <div class="card bg-primary">
+                            <div class="card-body profile-user-box">
+
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="media">
+                                            <span class="float-left m-2 mr-4"><img src="assets/images/users/avatar-an.png" style="height: 100px;" alt="" class="rounded-circle img-thumbnail"></span>
+                                            <div class="media-body">
+
+                                                <h4 class="mt-1 mb-1 text-white">安　宁</h4>
+                                                <p class="font-13 text-white-50">毕业于河北工业大学城市学院（数学与应用数学专业）</p>
+
+                                                <ul class="mb-0 list-inline text-light">
+                                                    <li class="list-inline-item mr-3">
+                                                        <h5 class="mb-1">26岁</h5>
+                                                        <p class="mb-0 font-13 text-white-50">单身！顺便征个对象~</p>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <h5 class="mb-1">Java工程师</h5>
+                                                        <p class="mb-0 font-13 text-white-50">现就职于<a id="com-a" href="http://www.safetytech.cn" target="_blank">北京森馥科技股份有限公司</a></p>
+                                                    </li>
+                                                </ul>
+                                            </div> <!-- end media-body-->
+                                        </div>
+                                    </div> <!-- end col-->
+
+                                    <div class="col-sm-4">
+                                        <div class="text-center mt-sm-0 mt-3 text-sm-right">
+                                            <button type="button" class="btn btn-light">
+                                                <i class="mdi mdi-account-edit mr-1"></i> 下载开发者简历
+                                            </button>
+                                        </div>
+                                    </div> <!-- end col-->
+                                </div> <!-- end row -->
+
+                            </div> <!-- end card-body/ profile-user-box-->
+                        </div><!--end profile/ card -->
+                    </div> <!-- end col-->
+                </div>
+                <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Personal-Information -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mt-0 mb-3">个人简介</h4>
+                                <p class="text-muted font-13">
+                                    您好，我是一名普通的码农，做这个网站的初衷是为工作和生活提供便捷，暂未考虑推广的可能性。由于本职工作是Java后端工程师，前端改的内容比较糙。对服务器、操作系统有一定的了解，能部署简单的web项目。具体技术掌握情况将在下述内容中做详细说明。
+                                </p>
+
+                                <hr/>
+
+                                <div class="text-left">
+                                    <p class="text-muted"><strong>所在地 :</strong> <span class="ml-2">帝都 北京</span></p>
+
+                                    <p class="text-muted"><strong>电话 :</strong><span class="ml-2">(+86) 156 338 28265</span></p>
+
+                                    <p class="text-muted"><strong>邮箱 :</strong> <span class="ml-2">aaaaa347852901@qq.com</span></p>
+
+                                    <p class="text-muted"><strong>故乡 :</strong> <span class="ml-2">河北 石家庄</span></p>
+
+                                    <p class="text-muted"><strong>计算机语言 :</strong>
+                                        <span class="ml-2"> Java, sql, html, js, vue, shell</span>
+                                    </p>
+                                    <p class="text-muted mb-0"><strong>求职状态 :</strong>
+                                        <span class="ml-2"> 持观望态度 </span>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Personal-Information -->
+
+                        <!-- Toll free number box-->
+                        <div class="card text-white bg-info overflow-hidden">
+                            <div class="card-body">
+                                <div class="toll-free-box text-center">
+                                    <h4> <i class="mdi mdi-deskphone"></i> Toll Free : 1-234-567-8901</h4>
+                                </div>
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+                        <!-- End Toll free number box-->
+
+                        <!-- Messages-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">技能熟练度</h4>
+
+                                <div class="inbox-widget">
+                                    <b style="color: orange">JAVA：</b>
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">熟练</div>
+                                    </div>
+                                    <b style="color: orange">SQL：</b>
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">熟练</div>
+                                    </div>
+                                    <b style="color: orange">SHELL：</b>
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">一般</div>
+                                    </div>
+                                    <b style="color: orange">HTML/CSS：</b>
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">一般</div>
+                                    </div>
+                                    <b style="color: orange">JS：</b>
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">一般</div>
+                                    </div>
+                                </div> <!-- end inbox-widget -->
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+
+                    </div> <!-- end col-->
+
+                    <div class="col-md-8">
+
+                        <!-- Chart-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">工作经历</h4>
+                                <div class="col-lg-12">
+
+                                    <div id="accordion1" class="custom-accordion mb-4">
+
+                                        <div class="card mb-0">
+                                            <div class="card-header" id="headingOne1">
+                                                <h5 class="m-0">
+                                                    <a class="custom-accordion-title d-block pt-2 pb-2" data-toggle="collapse" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                                        北京森馥科技股份有限公司（2019.4 - 至今） <span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne1" data-parent="#accordion1">
+                                                <div class="card-body">
+                                                    <p class="text-muted font-14">
+                                                        Java工程师&nbsp;&nbsp;|&nbsp;&nbsp;9000元/月
+                                                    </p>
+                                                    <p class="text-muted font-14">
+                                                        技能标签：
+                                                        <button type="button" class="btn btn-light btn-tech">Java</button>
+                                                        <button type="button" class="btn btn-light btn-tech">DB2</button>
+                                                        <button type="button" class="btn btn-light btn-tech">Linux</button>
+                                                        <button type="button" class="btn btn-light btn-tech">Websphere</button>
+                                                    </p>
+                                                    <p class="text-muted font-13">
+                                                        在该公司主要负责各个平台的改造与升级，主要负责山东电网电磁监控项目、广东省电磁环境监测平台、公司电磁环境在线系统。主要的工作有：<br />
+                                                        1、熟悉公司项目框架并熟练使用：spring、springmvc、mybatis、springboot <br />
+                                                        2、编写JavaWeb项目过程中待产出的文档 <br />
+                                                        3、独立分析需求，设计数据库表及方案、实现后端接口 <br />
+                                                        4、完成tomcat、websphere，nginx服务器的搭建与部署 <br />
+                                                        5、熟练使用mysql、oracle关系型数据库，mongodb、redis非关系型数据库<br />
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end card-->
+
+                                        <div class="card mb-0">
+                                            <div class="card-header" id="headingTwo1">
+                                                <h5 class="m-0">
+                                                    <a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                                                        北京中科金财科技股份有限公司（2017.3 - 2019.4） <span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseTwo1" class="collapse" aria-labelledby="headingTwo1" data-parent="#accordion1">
+                                                <div class="card-body">
+                                                    <p class="text-muted font-14">
+                                                        Java工程师&nbsp;&nbsp;|&nbsp;&nbsp;6000元/月
+                                                    </p>
+                                                    <p class="text-muted font-14">
+                                                        技能标签：
+                                                        <button type="button" class="btn btn-light btn-tech">Java</button>
+                                                        <button type="button" class="btn btn-light btn-tech">Oracle</button>
+                                                        <button type="button" class="btn btn-light btn-tech">Mysql</button>
+                                                        <button type="button" class="btn btn-light btn-tech">MongoDB</button>
+                                                        <button type="button" class="btn btn-light btn-tech">Tomcat</button>
+                                                    </p>
+                                                    <p class="text-muted font-13">
+                                                        在该公司主要负责各个银行电子验印系统的改造与升级，主要负责中信银行的项目，中行、华夏浦发项目都有支持。主要的工作有：<br />
+                                                        一、银行项目的开发：主要针对电子验印系统、印鉴卡柜系统的开发、升级和改造。与行行方业务部门沟通需求，并根据需求分析可行的方案，并编写相关文档，完成功能开发。<br />
+                                                        二、项目维护：对已完成的项目定期维护及现场支持。<br />
+                                                        三、服务器运维：支持本系统自动化上线，定期巡检和排查问题。<br />
+                                                        四、处理历史数据问题，通过历史数据分析旧的业务规则，确定实体关系，完成数据迁移方案，并实施。<br />
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end card-->
+
+                                        <div class="card mb-0">
+                                            <div class="card-header" id="headingThree1">
+                                                <h5 class="m-0">
+                                                    <a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                                                        未来不可期，活在当下 <span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseThree1" class="collapse" aria-labelledby="headingThree1" data-parent="#accordion1">
+                                                <div class="card-body">
+                                                    <p class="text-muted font-13">
+                                                        人在何处，心就在何处
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end card-->
+                                    </div> <!-- end custom accordions-->
+                                </div> <!-- end col -->
+                            </div>
+                        </div>
+                        <!-- End Chart-->
+
+                        <!-- Chart-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">项目经历</h4>
+                                <div class="col-lg-12">
+
+                                    <div id="accordion" class="custom-accordion mb-4">
+
+                                        <div class="card mb-0">
+                                            <div class="card-header" id="headingOne">
+                                                <h5 class="m-0">
+                                                    <a class="custom-accordion-title d-block pt-2 pb-2" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        某省电磁环境管理与检测平台（2019.7 - 至今） <span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="text-muted font-13">
+                                                        <b>项目描述：</b><br />
+                                                        本项目用于备案基站信息，收集基站检测数据，通过数据分析完成电磁环境的管理。<br />
+                                                        主要面向四大用户群体：政府机构、通信运营商、监测机构和公众。<br />
+                                                        该平台主要分为两大模块：业务模块和基站模块，分别采用Spring+Struts+Mybatis和Spring+SpringMVC+Mybatis框架，并通过Socket手写一套拟http协议的通信方式，实现实时消息推送。<br />
+                                                        项目使用Oracle数据库、redis非关系型数据库，使用Tomcat作为Web服务器。<br />
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end card-->
+
+                                        <div class="card mb-0">
+                                            <div class="card-header" id="headingTwo">
+                                                <h5 class="m-0">
+                                                    <a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        某省变电站环境监测平台（2019.4 - 2019.7） <span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="text-muted font-13">
+                                                        <b>项目描述：</b><br />
+                                                        该项目为平台项目，用于维护站点信息，并收集实时数据、展示实时数据、统计分析结果，团队采用前后端分离的开发方式。<br />
+                                                        后端采用Spring+Struts+Mybatis框架，关系型数据库使用Mysql，非关系型数据库使用MongoDB，项目使用Tomcat作为web服务器<br />
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end card-->
+
+                                        <div class="card mb-0">
+                                            <div class="card-header" id="headingThree">
+                                                <h5 class="m-0">
+                                                    <a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        中信银行验印系统三期（2018.3 - 2019.4） <span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="text-muted font-13">
+                                                        <b>项目描述：</b><br />
+                                                        在多系统需要接入的大环境下，原系统需向验印平台。定位为全行级别的服务平台，对外提供验印必须的功能以及标准流程，将业务权限逐步交由渠道控制。<br />
+                                                        验印平台主要提供对外数据和插件服务；其中对外数据服务负责基本数据的交互，插件服务负责处理影像类交易。并可按照银行的安全要求与准入要求做接口与插件的适配。<br />
+                                                        平台内部管理印鉴相关信息、验印参数、接入系统配置和数据统计。<br />
+                                                        项目以spring＋struts＋hibernate为主框架，另外嵌入一套公司独立搭建的交易引擎作为核心，负责复杂交易的执行与管理。另外可单独提供一套后台页面管理端。<br />
+                                                        按照行内要求，数据库使用db2，服务器双机热备，中间件使用was，服务器双机搭互备。<br />
+                                                        另外支持异步的后台批量验印（java部分未涉及多线程，但可以考虑，设计可行）。<br />
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end card-->
+
+                                        <div class="card mb-0">
+                                            <div class="card-header" id="headingFour">
+                                                <h5 class="m-0">
+                                                    <a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                        异步的后台批量验印（2018.1 - 2019.4）  <span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="text-muted font-13">
+                                                        <b>项目描述：</b><br />
+                                                        根据浙商银行需求，设计实现基与WebService通信的java web项目，完成异步的后台批量验印功能。<br />
+                                                        需要分别搭建WebService客户端及服务端。最终使用客户端使用cxf框架，服务端基于Axis，并且服务端可以运行在tomcat或WebSphere服务器上；并实现双活<br />
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end card-->
+
+                                        <div class="card mb-0">
+                                            <div class="card-header" id="headingFive">
+                                                <h5 class="m-0">
+                                                    <a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                        中信银行验印系统（2017.5 - 2019.3） <span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="text-muted font-13">
+                                                        <b>项目描述：</b><br />
+                                                        电子验印系统用于存储用户信息、印鉴信息、自动验印的管理系统，主要是通过判别验印的真伪，来保证支付审核的安全，减少人工作业时间；在部分银行的特色需求下，会提供后台验印、批量验印等附属服务。<br />
+                                                        该项目为基于Spring+Struts1+Hibernate的java web项目，集成了控件操作扫描仪及硬件设备，项目运行在linux服务器上，中间件为IBM的websphere，数据库使用IBM的DB2，主机热备的方式部署。<br />
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end card-->
+
+                                        <div class="card mb-0">
+                                            <div class="card-header" id="headingSix">
+                                                <h5 class="m-0">
+                                                    <a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                        印鉴卡管理系统（2017.3 - 2019.5） <span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="text-muted font-13">
+                                                        <b>项目描述：</b><br />
+                                                        印鉴卡管理系统是对用户信息、印鉴卡实物及印鉴卡信息进行存储管理和编号存放的。为银行实现印鉴卡实物电子化管理提供了有力支持，减少人工查阅的工作量，延长使用年限、增强管控以及提高安全性有显著效果。<br />
+                                                        该项目为基于Spring+Struts1+Hibernate的java web项目，使用tomcat的中间件，根据现场环境的不同，分别使用sqlserver、oracle、DB2等关系型数据库。<br />
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end card-->
+
+                                    </div> <!-- end custom accordions-->
+                                </div> <!-- end col -->
+                            </div>
+                        </div>
+                        <!-- End Chart-->
+
+                    </div>
+                    <!-- end col -->
+
+                </div>
+                <!-- end row -->
+
+            </div> <!-- content -->
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="row">
+                    <div class="col-md-6">
+                        2018 - 2019 © Hyper - Coderthemes.com
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-md-right footer-links d-none d-md-block">
+                            <a href="javascript: void(0);">About</a>
+                            <a href="javascript: void(0);">Support</a>
+                            <a href="javascript: void(0);">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+        </div> <!-- content-page -->
+
+    </div> <!-- end wrapper-->
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+
+</div>
+<!-- END Container -->
+
+
+<!-- Right Sidebar -->
+<div class="right-bar">
+
+    <div class="rightbar-title">
+        <a href="javascript:void(0);" class="right-bar-toggle float-right">
+            <i class="dripicons-cross noti-icon"></i>
+        </a>
+        <h5 class="m-0">Settings</h5>
+    </div>
+
+    <div class="slimscroll-menu rightbar-content">
+
+        <!-- Settings -->
+        <hr class="mt-0" />
+        <h5 class="pl-3">Basic Settings</h5>
+        <hr class="mb-0" />
+
+        <div class="p-3">
+            <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="notifications-check" checked>
+                <label class="custom-control-label" for="notifications-check">Notifications</label>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="api-access-check">
+                <label class="custom-control-label" for="api-access-check">API Access</label>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="auto-updates-check" checked>
+                <label class="custom-control-label" for="auto-updates-check">Auto Updates</label>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="online-status-check" checked>
+                <label class="custom-control-label" for="online-status-check">Online Status</label>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="auto-payout-check">
+                <label class="custom-control-label" for="auto-payout-check">Auto Payout</label>
+            </div>
+
+        </div>
+
+
+        <!-- Timeline -->
+        <hr class="mt-0" />
+        <h5 class="pl-3">Recent Activity</h5>
+        <hr class="mb-0" />
+        <div class="pl-2 pr-2">
+            <div class="timeline-alt">
+                <div class="timeline-item">
+                    <i class="mdi mdi-upload bg-info-lighten text-info timeline-icon"></i>
+                    <div class="timeline-item-info">
+                        <a href="#" class="text-info font-weight-bold mb-1 d-block">You sold an item</a>
+                        <small>Paul Burgess just purchased “Hyper - Admin Dashboard”!</small>
+                        <p class="mb-0 pb-2">
+                            <small class="text-muted">5 minutes ago</small>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <i class="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon"></i>
+                    <div class="timeline-item-info">
+                        <a href="#" class="text-primary font-weight-bold mb-1 d-block">Product on the Bootstrap Market</a>
+                        <small>Dave Gamache added
+                            <span class="font-weight-bold">Admin Dashboard</span>
+                        </small>
+                        <p class="mb-0 pb-2">
+                            <small class="text-muted">30 minutes ago</small>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <i class="mdi mdi-microphone bg-info-lighten text-info timeline-icon"></i>
+                    <div class="timeline-item-info">
+                        <a href="#" class="text-info font-weight-bold mb-1 d-block">Robert Delaney</a>
+                        <small>Send you message
+                            <span class="font-weight-bold">"Are you there?"</span>
+                        </small>
+                        <p class="mb-0 pb-2">
+                            <small class="text-muted">2 hours ago</small>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <i class="mdi mdi-upload bg-primary-lighten text-primary timeline-icon"></i>
+                    <div class="timeline-item-info">
+                        <a href="#" class="text-primary font-weight-bold mb-1 d-block">Audrey Tobey</a>
+                        <small>Uploaded a photo
+                            <span class="font-weight-bold">"Error.jpg"</span>
+                        </small>
+                        <p class="mb-0 pb-2">
+                            <small class="text-muted">14 hours ago</small>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <i class="mdi mdi-upload bg-info-lighten text-info timeline-icon"></i>
+                    <div class="timeline-item-info">
+                        <a href="#" class="text-info font-weight-bold mb-1 d-block">You sold an item</a>
+                        <small>Paul Burgess just purchased “Hyper - Admin Dashboard”!</small>
+                        <p class="mb-0 pb-2">
+                            <small class="text-muted">1 day ago</small>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="rightbar-overlay"></div>
+<!-- /Right-bar -->
+
+
+<!-- App js -->
+<script src="assets/js/app.min.js"></script>
+
+<!-- third party js -->
+<script src="https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min.js"></script>
+<!-- third party js ends -->
+
+<!-- demo app -->
+<script src="assets/js/pages/demo.profile.js"></script>
+<!-- end demo js-->
+
+</body>
+
+</html>
